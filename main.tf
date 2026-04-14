@@ -4,7 +4,7 @@ provider "google" {
 }
 
 resource "google_bigquery_dataset" "example" {
-  dataset_id = "test"
+  dataset_id = var.dataset_id
   location   = var.region
 
   delete_contents_on_destroy = true
